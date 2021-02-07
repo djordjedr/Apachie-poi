@@ -1,0 +1,15 @@
+try {
+		File f=new File ("Youtube.xlsx");
+		InputStream inp = new FileInputStream(f);
+		XSSFWorkbook wb = new XSSFWorkbook(inp); // Pretvaranje fajla u odgovarajuci format
+		Sheet sheet = wb.getSheetAt(0); // Dohvata sheet
+		Row row1 = sheet.getRow(0);// Dohvata red
+		Cell c1=row1.getCell(0);
+		String search1=c1.toString();
+		//driver.navigate().to(YouTube.URL);		//program krece od ovoga
+		Thread.sleep(5000);
+		wb.close();
+		
+		} catch (IOException | InterruptedException e) {
+			e.printStackTrace();
+		} 
